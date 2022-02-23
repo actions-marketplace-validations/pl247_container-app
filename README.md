@@ -1,21 +1,10 @@
-# Hello world docker actions
+# Sample Container App
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+The purpose of this simple app is to demonstrate the ability to automatically build a container image and publish it to the github container registry (ghcr.io) upon code change.
 
-## Inputs
+Then the newly updated container can be immediately consumed in Intersight Kubernetes Service (IKS).
 
-## `who-to-greet`
+## To Do
 
-**Required** The name of the person to greet. Default `"World"`.
+Need to create versioning strategy so the build and publish only happens on major release and not each code update.
 
-## Outputs
-
-## `time`
-
-The time we greeted you.
-
-## Example usage
-
-uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'

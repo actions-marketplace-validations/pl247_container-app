@@ -1,5 +1,7 @@
 name: Create and publish a Docker image
 
+# run workflow on push events
+# See https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on: [push]
 
 #on:

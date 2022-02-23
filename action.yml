@@ -1,16 +1,16 @@
 # action.yml
 name: 'pl247 action'
-description: 'Greet someone and record the time'
+description: 'Build and publish container image to ghcr.io'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  environment:  # id of input
+    description: 'Application Environment'
     required: true
-    default: 'World'
+    default: 'Production'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'Current time'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.environment }}
