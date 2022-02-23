@@ -6,8 +6,9 @@ COPY entrypoint.sh /entrypoint.sh
 
 # Install 
 RUN apk update && \
-    apk add alpine-conf
+    apk add tzdata
+
+ENV TZ="Canada/Central"
 
 # Code to execute when the docker container starts up
 ENTRYPOINT ["/entrypoint.sh"]
-ENTRYPOINT ["setup-timezone -z Canada/Central"]
