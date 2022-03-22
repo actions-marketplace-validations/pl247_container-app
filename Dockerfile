@@ -4,7 +4,7 @@ FROM alpine:3.10
 # Copies this code from the github repo to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-# Install curl and timezone data packages
+# Install curl and timezone data packages test
 RUN apk update && \
     apk add curl && \
     apk add tzdata
