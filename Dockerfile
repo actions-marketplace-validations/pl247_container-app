@@ -1,9 +1,6 @@
 # Container base image and version that runs the app
 FROM alpine:3.10
 
-LABEL org.opencontainers.image.description="Minimal linux build" \
-    org.opencontainers.image.title="Example"
-
 # Copies this code from the github repo to the filesystem path `/` of the container 
 COPY entrypoint.sh /entrypoint.sh
 
