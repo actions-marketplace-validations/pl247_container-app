@@ -7,7 +7,8 @@ COPY entrypoint.sh /entrypoint.sh
 # Install curl and timezone data packages test test
 RUN apk update && \
     apk add curl && \
-    apk add tzdata
+    apk add tzdata && \
+    apk add bash
 
 # Set timezone environment variable
 ENV TZ="Canada/Central"
